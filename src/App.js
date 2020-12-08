@@ -20,25 +20,36 @@ function App() {
     if (_token) {
       dispatch({
         type: "SET_TOKEN",
-        token: _token
+        token: _token,
       });
-      setToken(_token);
 
       spotify.setAccessToken(_token);
       spotify.getMe().then((user) => {
         dispatch({
           type: "SET_USER",
-          user: user
+          user: user,
         });
       }); //gets the user account
+      spotify.getUserPlaylists().then((playlists) => {
+        dispatch({
+          type: "SET_PLAYLISTS",
+          playlists: playlists,
+        });
+        console.log(playlists);
+      });
+      spotify.getPlaylist("37i9dQZEVXcX3x9vRHzBED").then((response) => {
+        dispatch({
+          type: "SET_DISCOVER_WEEKLY",
+          discover_weekly: response,
+        });
+      });
     }
-
-    console.log(("token:", token));
   }, []);
   console.log(("token:", token));
   console.log("person", user);
+
   return (
-    <div className="app">
+    <div className='app'>
       {token ? <Player spotify={spotify} /> : <Login />}
     </div>
   );

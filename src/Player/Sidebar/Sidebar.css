@@ -6,9 +6,19 @@
   background-color: #040404;
   padding: 0 10px;
 }
+.sidebar > hr {
+  margin: 10px auto;
+  width: 90%;
+  border: 1px solid #282828
+}
 .sidebar__logo {
   /* object-fit: contain; */
   margin-right: auto;
   height: 70px;
   padding: 10px;
+}
+.sidebar__title {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 12px;
 }
