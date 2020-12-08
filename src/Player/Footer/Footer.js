@@ -16,10 +16,10 @@ function Footer() {
   return (
     <div className='footer'>
       <div className='footer__left'>
-        <img className='footer__ulbumLogo' src='' alt='ulbum-cover' />
+        <img className='footer__ulbumLogo' src='https://e.snmc.io/i/300/w/629647ba02e7961b6e306903bdb531c9/7082929' alt='ulbum-cover' />
         <div className='footer__songInfo'>
-          <h4>song</h4>
-          <p>artist</p>
+          <h4>92 Explorer</h4>
+          <p>Post Malone</p>
         </div>
 
        
